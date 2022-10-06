@@ -9,16 +9,6 @@
 
  function calcFib(max) {
 
-    var x = 0;
-    var y = 1;
-
-    while(y < max) {
-      
-        console.log(y);
-        y += x;
-        x = y - x;
-    }
-
 }
 
 //---------------------------------------

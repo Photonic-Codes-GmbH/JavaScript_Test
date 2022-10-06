@@ -9,61 +9,15 @@
  */
 
  class Logger {
-    log(message){
-        console.log(message);
-    }
+
 }
 
 class RecursiveFibCalculator {
 
-    genFibonacciAsync(list, ceiling) {
-        return new Promise( function(resolve, reject) {
-
-            // async recursive
-            window.setTimeout( function() {
-
-                var next
-                next = list[list.length - 1] + list[list.length - 2];
-                if (next > ceiling)
-
-                    resolve();
-
-                else {
-                    
-                    list.push(next);
-                    resolve(genFibonacciAsync(list, ceiling));
-                }
-            }, 1);
-        });
-    }
 }
 
 class FibService {
     
-    constructor(logger, FibCalculator){
-
-        this.logger = logger
-        this.fibCalculator = FibCalculator
-    }
-
-    logger
-
-    printFib(min, max) {
-          
-          var list = [];
-          list.push(1);
-          list.push(1);
-
-          this.fibCalculator.genFibonacciAsync(list, 1000)
-            .then(function() {
-              list.forEach(function(val) {
-
-                isInside = y >= min && y <= max
-                isInside ? logger.log(y) : "";
-                [x, y] = this.fibCalculator.calcFib([x, y])
-              })
-            });
-    }
 }
 
 //---------------------------------------

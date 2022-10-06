@@ -19,26 +19,11 @@
 
  class Logger {
 
-    /*
-        * wraps the console
-        * provides access to console.log
-        * supports multiple arguments for log (i.e. logger.log(arg1, arg2, ..., argN))
-    */
-
-    log(message){
-
-        console.log(message);
-    }
 }
 
 //   * provides a method `calcFib` to calculate the fibonacci sequence
 class IterativeFibCalculator {
 
-    // calculate the fibonacci sequence
-    calcFib([a, b]){
-
-        return [b, a + b]
-    }
 }
 
 /*
@@ -47,31 +32,6 @@ class IterativeFibCalculator {
 */
 class FibService {
     
-    constructor(logger, fibCalculator){
-
-        this.logger = logger
-        this.fibCalculator = fibCalculator
-    }
-
-    logger
-
-    // internally calls `IterativeFibCalculator.calcFib`
-    // uses the `Logger` to print values >= min and <= max
-    printFib(min, max) {
-        var x = 0;
-        var y = 1;
-    
-        let isInside
-        while(y < max) {
-
-            //uses the `Logger` to print values >= min and <= max
-            isInside = y >= min && y <= max;
-            isInside ? logger.log(y) : "";
-            [x, y] = this.fibCalculator.calcFib([x, y]);
-        }
-
-
-    }
 }
 
 //---------------------------------------
